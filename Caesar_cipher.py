@@ -2,7 +2,6 @@ def caesar_encrypt(text, shift):
     encrypted = ""
     for char in text:
         if char.isalpha():
-            # Determine ASCII base (97 for lowercase, 65 for uppercase)
             ascii_base = 65 if char.isupper() else 97
             # Convert to 0-25 range, apply shift, and wrap around with modulo
             shifted = (ord(char) - ascii_base + shift) % 26
